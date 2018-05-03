@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="shortcut icon" href="style/images/favicon.png">
-<title>Lydia</title>
+<link rel="shortcut icon" href="style/images/eddyicon.png">
+<title>Eddy Motorworks</title>
 <!-- Bootstrap core CSS -->
 <link href="style/css/bootstrap.min.css" rel="stylesheet">
 <link href="style/css/plugins.css" rel="stylesheet">
@@ -106,10 +106,9 @@
     
     <div class="social-wrapper">
       <ul class="social naked">
-        <li><a href="#"><i class="icon-s-facebook"></i></a></li>
-        <li><a href="#"><i class="icon-s-twitter"></i></a></li>
-        <li><a href="#"><i class="icon-s-flickr"></i></a></li>
-        <li><a href="#"><i class="icon-s-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/eddymotorworks/"><i class="icon-s-facebook"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCD3-z8RU0096r5Wf2-JIXHQ"><i class="icon-s-youtube"></i></a></li>
+        <li><a href="https://www.instagram.com/eddy.motorworks/"><i class="icon-s-instagram"></i></a></li>
       </ul>
       <!-- /.social --> 
     </div>
@@ -124,20 +123,20 @@
 	var map;
 	function init() {
 	    var mapOptions = {
-	        center: new google.maps.LatLng(51.211215, 3.226287),
+	        center: new google.maps.LatLng(33.784663, -84.263806),
 	        zoom: 15,
 	        zoomControl: true,
 	        zoomControlOptions: {
 	            style: google.maps.ZoomControlStyle.DEFAULT,
 	        },
 	        disableDoubleClickZoom: false,
-	        mapTypeControl: true,
+	        mapTypeControl: false,
 	        mapTypeControlOptions: {
 	            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
 	        },
 	        scaleControl: true,
 	        scrollwheel: false,
-	        streetViewControl: true,
+	        streetViewControl: false,
 	        draggable : true,
 	        overviewMapControl: false,
 	        mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -147,11 +146,11 @@
 	    var mapElement = document.getElementById('map');
 	    var map = new google.maps.Map(mapElement, mapOptions);
 	    var locations = [
-	        ['Boudewijn Ostenstraat 2', 51.211215, 3.226287]
+	        ['Boudewijn Ostenstraat 2', 33.784663, -84.263806]
 	    ];
 	    for (i = 0; i < locations.length; i++) {
 	        marker = new google.maps.Marker({
-	            icon: 'style/images/map-pin.png',
+	            icon: 'style/images/mappin.png',
 	            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 	            map: map
 	        });
@@ -162,8 +161,8 @@
     <div class="container inner">
       <div class="row">
         <div class="col-sm-8">
-          <h2 class="section-title">Get in Touch</h2>
-          <p>Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus.</p>
+          <h2 class="section-title">Contact Us</h2>
+          <p>Got a question or just want to say hello? We'd love to hear from you. Send us a message and we'll respond as soon as possible!</p>
           <div class="divide10"></div>
           <div class="form-container">
             <form action="contact/vanilla-form.php" method="post" class="vanilla vanilla-form" novalidate="novalidate">
@@ -180,36 +179,23 @@
                 <div class="col-sm-6">
                   <div class="form-field">
                     <label>
-                      <input type="email" name="email" placeholder="Your e-mail" required="required">
-                    </label>
-                  </div>
-                  <!--/.form-field --> 
-                </div>
-                <!--/column -->
-                <div class="col-sm-6">
-                  <div class="form-field">
-                    <label>
                       <input type="tel" name="tel" placeholder="Phone">
                     </label>
                   </div>
                   <!--/.form-field --> 
                 </div>
                 <!--/column -->
-                <div class="col-sm-6">
+                <!--/column -->
+                <div class="col-sm-12">
                   <div class="form-field">
-                    <label class="custom-select">
-                      <select name="department" required="required">
-                        <option value="">Select Department</option>
-                        <option value="Sales">Sales</option>
-                        <option value="Marketing">Marketing</option>
-                        <option value="Support">Customer Support</option>
-                        <option value="Other">Other</option>
-                      </select>
-                      <span><!-- fake select handler --></span> </label>
+                    <label>
+                      <input type="email" name="email" placeholder="Your e-mail" required="required">
+                    </label>
                   </div>
                   <!--/.form-field --> 
                 </div>
-                <!--/column --> 
+                <!--/column -->
+                
               </div>
               <!--/.row -->
               <textarea name="message" placeholder="Type your message here..." required="required"></textarea>
@@ -217,7 +203,7 @@
                 <label>Subject:</label>
                 <label>
                   <input type="radio" name="subject" value="General">
-                  <span><!-- fake radio --></span> General</label>
+                  <span><!-- fake radio --></span> General Enquiry</label>
                 <label>
                   <input type="radio" name="subject" value="Hi">
                   <span><!-- fake radio --></span> Say Hi</label>
@@ -226,7 +212,7 @@
                   <span><!-- fake radio --></span> Other</label>
               </div>
               <!--/.radio-set -->
-              <input type="submit" class="btn" value="Send" data-error="Fix errors" data-processing="Sending..." data-success="Thank you!">
+              <input type="submit" class="btn" value="Send" data-error="SEND" data-processing="Sending..." data-success="Thank you!">
               <footer class="notification-box"></footer>
             </form>
             <!--/.vanilla-form --> 
@@ -238,14 +224,21 @@
         
         <aside class="col-sm-4">
           <div class="sidebox widget">
-            <h3 class="widget-title">Address</h3>
-            <p>Fusce dapibus, tellus commodo, tortor mauris condimentum utellus fermentum, porta sem malesuada magna. Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur.</p>
+            <h3 class="widget-title">On the Web</h3>
+            <ul class="social">
+              <li><a href="https://www.facebook.com/eddymotorworks/"><i class="icon-s-facebook"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCD3-z8RU0096r5Wf2-JIXHQ"><i class="icon-s-youtube"></i></a></li>
+              <li><a href="https://www.instagram.com/eddy.motorworks/"><i class="icon-s-instagram"></i></a></li>
+            </ul>
+            <br>
             <address>
-            <strong>Kwoon, Inc.</strong><br>
-            Moon Street Light Avenue, 14/05 <br>
-            Jupiter, JP 80630<br>
-            <abbr title="Phone">P:</abbr> 00 (123) 456 78 90 <br>
-            <abbr title="Email">E:</abbr> <a href="mailto:#">first.last@email.com</a>
+            <h3 class="widget-title">Contact Information</h3>
+            <!-- <strong>Address:</strong> -->
+            <div class="contact-info">
+            <i class="icon-location"></i>34 N Clarendon Ave, Scottdale, GA 30079<br>
+            <i class="icon-phone"></i>(404) 890-0236 <br>
+            <i class="icon-mail"></i><a href="mailto:ben@eddymotorworks.com">ben@eddymotoworks.com</a>
+            </div>
             </address>
           </div>
           <!-- /.widget --> 
@@ -262,98 +255,52 @@
   <!--/.light-wrapper -->
   
   <footer class="footer inverse-wrapper">
-    <div class="container inner">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="widget">
-            <h3 class="widget-title">Popular Posts</h3>
-            <ul class="post-list">
-              <li>
-                <div class="icon-overlay"> <a href="blog-post.html"><img src="style/images/art/a1.jpg" alt="" /> </a> </div>
-                <div class="meta">
-                  <h5><a href="blog-post.html">Magna Mollis Ultricies</a></h5>
-                  <em><span class="date">3th Oct 2012</span> <span class="comments"><a href="#"><i class="icon-chat-1"></i> 8</a></span></em> </div>
-              </li>
-              <li>
-                <div class="icon-overlay"> <a href="blog-post.html"><img src="style/images/art/a2.jpg" alt="" /> </a> </div>
-                <div class="meta">
-                  <h5><a href="blog-post.html">Ornare Nullam Risus Tellus Elit Fusce Inceptos Etiam</a></h5>
-                  <em><span class="date">28th Sep 2012</span> <span class="comments"><a href="#"><i class="icon-chat-1"></i> 5</a></span></em> </div>
-              </li>
-              <li>
-                <div class="icon-overlay"> <a href="blog-post.html"><img src="style/images/art/a3.jpg" alt="" /> </a> </div>
-                <div class="meta">
-                  <h5><a href="blog-post.html">Euismod Nullam</a></h5>
-                  <em><span class="date">15th Aug 2012</span> <span class="comments"><a href="#"><i class="icon-chat-1"></i> 9</a></span></em> </div>
-              </li>
-            </ul>
+    <!-- <div class="container inner"> -->
+      <!-- <div class="row"> -->
+        <!-- <div class="col-sm-4"> -->
+          <!-- <div class="widget"> -->
+            
             <!-- /.post-list --> 
-          </div>
+          <!-- </div> -->
           <!-- /.widget --> 
-        </div>
+        <!-- </div> -->
         <!-- /column -->
         
-        <div class="col-sm-4">
-          <div class="widget">
-            <h4 class="widget-title">Tags</h4>
-            <ul class="tag-list">
-              <li><a href="#" class="btn">Web</a></li>
-              <li><a href="#" class="btn">Photography</a></li>
-              <li><a href="#" class="btn">Illustation</a></li>
-              <li><a href="#" class="btn">Fun</a></li>
-              <li><a href="#" class="btn">Blog</a></li>
-              <li><a href="#" class="btn">Commercial</a></li>
-              <li><a href="#" class="btn">Journal</a></li>
-              <li><a href="#" class="btn">Nature</a></li>
-              <li><a href="#" class="btn">Still Life</a></li>
-            </ul>
-          </div>
+        <!-- <div class="col-sm-4"> -->
+          <!-- <div class="widget"> -->
+            
+          <!-- </div> -->
           <!-- /.widget -->
           
-          <div class="widget">
-            <h4 class="widget-title">Elsewhere</h4>
-            <ul class="social">
-              <li><a href="#"><i class="icon-s-rss"></i></a></li>
-              <li><a href="#"><i class="icon-s-twitter"></i></a></li>
-              <li><a href="#"><i class="icon-s-facebook"></i></a></li>
-              <li><a href="#"><i class="icon-s-pinterest"></i></a></li>
-              <li><a href="#"><i class="icon-s-linkedin"></i></a></li>
-            </ul>
+          <!-- <div class="widget"> -->
+            
             <!-- .social --> 
             
-          </div>
-        </div>
+          <!-- </div> -->
+        <!-- </div> -->
         <!-- /column -->
         
-        <div class="col-sm-4">
-          <div class="widget">
-            <h4 class="widget-title">Search</h4>
-            <form class="searchform" method="get">
-              <input type="text" id="s2" name="s" value="Search something" onfocus="this.value=''" onblur="this.value='Search something'">
-              <button type="submit" class="btn btn-default">Find</button>
-            </form>
-          </div>
+        <!-- <div class="col-sm-4"> -->
+          <!-- <div class="widget"> -->
+            
+          <!-- </div> -->
           <!-- /.widget -->
-          <div class="widget">
-            <h4 class="widget-title">Get In Touch</h4>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-            <div class="contact-info"> <i class="icon-location"></i> Moonshine St. 14/05 Light City <br />
-              <i class="icon-phone"></i>+00 (123) 456 78 90 <br />
-              <i class="icon-mail"></i> <a href="first.last@email.com">first.last@email.com</a> </div>
-          </div>
+          <!-- <div class="widget"> -->
+            
+          <!-- </div> -->
           <!-- /.widget --> 
           
-        </div>
+        <!-- </div> -->
         <!-- /column --> 
         
-      </div>
+      <!-- </div> -->
       <!-- /.row --> 
-    </div>
+    <!-- </div> -->
     <!-- .container -->
     
     <div class="sub-footer">
       <div class="container inner">
-        <p class="text-center">© 2015 Lydia. All rights reserved. Theme by <a href="http://elemisfreebies.com">elemis</a>.</p>
+        <p class="text-center">© 2017 Eddy Motorworks.</p>
       </div>
       <!-- .container --> 
     </div>
