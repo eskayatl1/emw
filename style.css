@@ -912,7 +912,7 @@ footer ul.circled li:before {
     font-size: 28px;
     line-height: 36px;
 }
-.tp-leftarrow.default,
+/* .tp-leftarrow.default,
 .tp-rightarrow.default {
     z-index: 100;
     cursor: pointer;
@@ -951,7 +951,7 @@ footer ul.circled li:before {
 }
 .tparrows:hover {
     color: rgba(255,255,255,1);
-}
+} */
 .tp-bullets {
     bottom: 30px !important
 }
