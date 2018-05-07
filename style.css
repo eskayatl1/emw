@@ -1005,6 +1005,11 @@ footer ul.circled li:before {
 .tp-dottedoverlay.twoxtwo {
     background: rgba(29,29,33,0.4)
 }
+
+.tp-video-play-button{
+    /* display:none! important; */
+    display: inline
+}
 /*-----------------------------------------------------------------------------------*/
 /* 	06. OWL CAROUSEL
 /*-----------------------------------------------------------------------------------*/
