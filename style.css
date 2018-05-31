@@ -2585,7 +2585,7 @@ figure img {
     text-transform: uppercase;
     margin: 0;
     font-size: 18px;
-    color: #3b3b3b;
+    color: #70aed2;
 }
 .panel.pricing table {
     margin-bottom: 0
@@ -4415,5 +4415,10 @@ textarea {
 	.cbp-filter-container .cbp-filter-item:before,
 	.sticky-filter ul li:before {
 	    padding: 0 10px 0 10px;
-	}
+    }
+    
+    .col-centered{
+        float: none;
+        margin: 0 auto;
+    }
 }
