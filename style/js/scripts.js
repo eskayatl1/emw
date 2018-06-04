@@ -371,7 +371,7 @@ $(document).ready(function() {
     /*	REVOLUTION
 	/*-----------------------------------------------------------------------------------*/
     $('.tp-fullscreen').revolution({
-        delay: 9000,
+        delay: 5000,
         startwidth: 1170,
         startheight: 750,
         hideThumbs: 0,
