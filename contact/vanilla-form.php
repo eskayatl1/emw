@@ -2,7 +2,7 @@
 // If is not empty it sets a header From in e-mail message (sets sender e-mail).
 // Note: some hosting servers can block sending e-mails with custom From field in header.
 //       If so, leave this field as empty.
-define('FROM_EMAIL', '');
+define('FROM_EMAIL', 'shravy24@gmail.com');
 
 // Recipient's e-mail. To this e-mail messages will be sent.
 // e.g.: john@example.com
