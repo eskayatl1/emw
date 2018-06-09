@@ -12,15 +12,16 @@ $contact_subject = $_POST['subject'];
 $contact_message = $_POST['message'];
 
 //Content
-$from = new SendGrid\Email(null, "eskay.atl1@gmail.com");
-$subject = "Hello World from the SendGrid PHP Library!";
+$from = new SendGrid\Email(null, "info@eddymotorworks.com");
+$subject = "EddyMotorWorks -New Message from '.$contact_name'";
 $to = new SendGrid\Email(null, "shravy24@gmail.com");
 $content = new SendGrid\Content("text/plain", "
-Name: {$contact_name}<br>
-Email: {$contact_email}<br> 
-Telephone: {$contact_tel}<br>
-Subject: {$contact_subject}<br>
-Message: {$contact_message}<br>
+.You have a new message from your website.
+.Subject: {$contact_subject}
+.Name: {$contact_name}
+.Email: {$contact_email}
+.Phone number: {$contact_tel}
+.Message: {$contact_message}
 ");
 
 /*Send the mail*/
