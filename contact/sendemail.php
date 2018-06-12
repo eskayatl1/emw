@@ -26,7 +26,7 @@ Message: {$contact_message}<br>
 ");
 
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
-$apiKey = getenv('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');
+$apiKey = getenv('');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
