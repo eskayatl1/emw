@@ -26,7 +26,7 @@ $content = new SendGrid\Content("text/plain", "
 
 /*Send the mail*/
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
-$apiKey = ('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');
+$apiKey = ('');
 $sg = new \SendGrid($apiKey);
 
 /*Response*/
